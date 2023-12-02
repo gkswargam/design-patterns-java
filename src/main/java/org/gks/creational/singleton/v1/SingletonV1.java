@@ -9,13 +9,13 @@ package org.gks.creational.singleton.v1;
     happens at the time of application start-up.
     2. No configuration can be passed to this class during application start-up.
  */
-public class Singleton {
+public class SingletonV1 {
     // eager initialization
-    private static final Singleton instance = new Singleton();
+    private static final SingletonV1 instance = new SingletonV1();
 
-    private Singleton() {}
+    private SingletonV1() {}
 
-    public static Singleton getInstance() {
+    public static SingletonV1 getInstance() {
         return instance;
     }
 }

@@ -8,20 +8,20 @@ package org.gks.creational.singleton.v3;
     1. It is verbose or requires more lines of code to implement.
  */
 
-public class Singleton {
-    private static Singleton instance;
+public class SingletonV3 {
+    private static SingletonV3 instance;
 
-    private Singleton() {}
+    private SingletonV3() {}
 
     /*
         Instance creation piece of code is called only when instance is not created, and it is not called
         every time when this method is called. There is no lock on the entire method.
      */
-    public static Singleton getInstance() {
+    public static SingletonV3 getInstance() {
         if(instance == null) {
-            synchronized(Singleton.class) {
+            synchronized(SingletonV3.class) {
                 if(instance == null) {
-                    instance = new Singleton();
+                    instance = new SingletonV3();
                 }
             }
         }

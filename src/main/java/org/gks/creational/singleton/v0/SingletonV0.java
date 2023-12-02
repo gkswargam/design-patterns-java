@@ -6,19 +6,19 @@ package org.gks.creational.singleton.v0;
     Drawbacks:
      1. This way of creating Singleton class is not thread safe.
  */
-public class Singleton {
-    private static Singleton instance;
+public class SingletonV0 {
+    private static SingletonV0 instance;
 
-    private Singleton() { }
+    private SingletonV0() { }
 
-    public static Singleton getInstance() {
+    public static SingletonV0 getInstance() {
         if(instance == null) {
             /*
                 If multiple threads are calling this method before the first instance is created and
                 if they enter this loop, then instance variable might be assigned new Singleton instance
                 multiple times.
              */
-            instance = new Singleton();
+            instance = new SingletonV0();
         }
 
         return instance;
